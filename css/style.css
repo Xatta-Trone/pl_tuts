@@ -10,7 +10,7 @@ a,a:hover{
 	text-decoration: none;
 }
 
-form input:focus, form select:focus{
+form input:focus, form select:focus,textarea:focus{
 	border-color:#61D2B4 !important;
 	box-shadow: 0 0 0 2px #61D2B4 !important;
 	outline: none !important;
@@ -19,14 +19,39 @@ form input:focus, form select:focus{
 h1,h2,h3{
 	font-family: 'Oswald', sans-serif;
 }
+.pl_btn,input[type='submit'] {
+    border:  none;
+    background:  #61D2B4;
+    color:  #fff;
+    padding:  10px 20px;
+    cursor:  pointer;
+    border-radius:  2px;
+}
 
 /* Nav area*/
 .nav_area {
     padding: 20px 0;
     width: 100%;
     position: absolute;
+    transition: 0.3s;
     top: 0;
     z-index: 99999999999999;
+}
+.nav_area.nav_fixed {
+    background:  #fff;
+    padding: 8px 0;
+    /* color:  #333; */
+    position: fixed;
+    box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.06);
+}
+
+.nav_area.nav_fixed a {
+    color:  #333;
+    font-size:  12px;
+}
+.nav_area.nav_fixed .mainmenu li li a,
+.nav_area.nav_fixed .mainmenu li li:hover a{
+	color: #fff;
 }
 /*.logo{padding-top: 5px;}*/
 .logo img {
@@ -40,7 +65,7 @@ h1,h2,h3{
     /*padding: 1px 10px;*/
 }
 .logo span span {
-    color:  #2ecc71;
+    color:  #61D2B4;
     border:  none;
     padding:  0;
 }
@@ -105,7 +130,7 @@ h1,h2,h3{
 .mainmenu li:hover:before,.mainmenu li.active:before {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  border-color: #26de81;
+  border-color: #61D2B4;
   transition: width 350ms ease-in-out;
   width: 100%;
 }
@@ -256,7 +281,7 @@ h1,h2,h3{
 .single_step_item .fa_container {
     font-size: 38px;
     padding: 10px;
-    margin: 20px 0;
+    margin-bottom: 20px;
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -336,14 +361,7 @@ h1,h2,h3{
     background: #333;
 }
 
-.pl_btn {
-    border:  none;
-    background:  #61D2B4;
-    color:  #fff;
-    padding:  10px 20px;
-    cursor:  pointer;
-    border-radius:  2px;
-}
+
 
 /*quote section*/
 
@@ -408,4 +426,131 @@ h1,h2,h3{
 }
 .user_review .owl-dots div.active span {
     background:  #61D2B4 !important;
+}
+/*contact section*/
+.contact_section {
+    background:  #343A40;
+    color:  #fff;
+}
+
+.contact_section a {
+    color:  #fff;
+}
+
+.contact_section .header_text {
+    text-align:  left;
+    /* display:  inline-block; */
+}
+
+.contact_section .header_text h1 {
+    display: inline-block;
+}
+
+.contact_section .header_text h1:before {
+    width:  100%;
+    left:  0%;
+}
+
+.contact_section span {color:  #61D2B4;}
+
+.social_box a {
+    display:  inline-block;
+    height: 45px;
+    width: 45px;
+    background: #61D2B4;
+    text-align:  center;
+    line-height: 44px;
+    font-size: 25px;
+    border: 1px solid transparent;
+    transition:  0.3s;
+    margin-right:  5px;
+}
+
+.social_box a:hover {
+    color:  #61D2B4;
+    border-color:  #61D2B4;
+    background:  transparent;
+}
+.contact_form input[type=text], .contact_form textarea {
+    background:  transparent;
+    border: 1px solid #fff;
+    margin-bottom: 15px;
+    padding:  5px 15px;
+}
+
+.contact_form input, .contact_form textarea {
+    display:  block;
+    width:  100%;
+}
+
+.contact_form textarea {
+    min-height:  150px;
+}
+
+.mini_footer {
+    background:  #292F35;
+    color:  #fff;
+    /* font-size:  14px; */
+    padding: 20px 0;
+}
+
+.mini_footer ul {
+    margin:  0;
+    padding:  0;
+    list-style:  none;
+}
+
+.mini_footer a {}
+
+.mini_footer a {
+    color:  #61D2B4;
+}
+
+.mini_footer li {
+    display:  inline-block;
+    padding-right: 10px;
+}
+
+/*return to top */
+
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: #61d2b4;
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top:hover {
+    background:#fff;
+    box-shadow: 0 0 10px #61d2b4;
+}
+#return-to-top:hover i {
+    color: #61d2b4;
+   
 }

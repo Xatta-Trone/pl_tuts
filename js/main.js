@@ -22,8 +22,25 @@ $(document).ready(function(){
 	    margin:10,
 	    nav:false,
 	    dots:true,
-	    items:3
+	    items:3,
+	    autoplay:true,
 	});
+
+	$(window).scroll(function() {
+	    if ($(this).scrollTop() >= 150) {        // If page is scrolled more than 50px
+	        $('#return-to-top').fadeIn(200);   // Fade in the arrow
+	        $(".nav_area").addClass("nav_fixed");
+	    } else {
+	        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+	        $(".nav_area").removeClass("nav_fixed");
+	    }
+	});
+	$('#return-to-top').click(function() {      // When arrow is clicked
+	    $('body,html').animate({
+	        scrollTop : 0                       // Scroll to top of body
+	    }, 500);
+	});
+
 
 
 
