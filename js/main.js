@@ -15,6 +15,16 @@ $(document).ready(function(){
 	            time: 1500
 	});
 
+	//owl acrousel 
+
+	$('.tesimonial_slides').owlCarousel({
+	    loop:true,
+	    margin:10,
+	    nav:false,
+	    dots:true,
+	    items:3
+	});
+
 
 
 });
