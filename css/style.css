@@ -612,7 +612,11 @@ h1,h2,h3{
 .hero_title_section p {
     margin:  0;
 }
-
+.content_section [class^="col-"] {
+    min-height: 165px !important;
+    display: table;
+    margin-bottom: 50px;
+}
 .single_content_section {
     text-align:  center;
     background:  #61D2B4;
@@ -687,11 +691,7 @@ h1,h2,h3{
 }
 
 
-.content_section [class^="col-"] {
-    min-height: 165px;
-    display: table;
-    margin-bottom: 50px;
-}
+
 
 /*softwares*/
 .software_content .single_content_section h1 {
