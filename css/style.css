@@ -613,6 +613,7 @@ h1,h2,h3{
     margin:  0;
 }
 .content_section [class^="col-"] {
+    height: 165px;
     min-height: 165px !important;
     display: table;
     margin-bottom: 50px;
