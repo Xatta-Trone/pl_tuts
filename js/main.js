@@ -41,6 +41,18 @@ $(document).ready(function(){
 	    }, 500);
 	});
 
+	//search 
+
+	$('#search').on('click', function() {
+		//console.log('cliked');
+		$('.overlay_search').removeClass('hidden').addClass('visible');
+	});
+
+	$('.close_btn, window').on('click', function() {
+		$('.overlay_search').removeClass('visible').addClass('hidden');
+	});
+
+
 
 
 

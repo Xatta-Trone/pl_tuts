@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Get In Touch</title>
+	<title>FAQ</title>
 
     <!-- <link href="https://fonts.googleapis.com/css?family=Oswald:300,400|Roboto:100,300,400,500,700,900" rel="stylesheet"> -->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -13,28 +13,114 @@
 </head>
 <body>
 
-<div class="login_page ">
-	<div class="container h-100">
-		<div class="row h-100 justify-content-center align-items-center text-center">
-			<div class="col-lg-6">
-				<div class="register_form">
-					<div class="header_text">
-						<h1>Register</h1>
-						<p>after successful verification of your credentials, the system will send you an email with your id and password.</p>
+
+	<div class="nav_area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2">
+					<div class="logo">
+						<a href="index.html"> <!-- <span>PL <span>Tutorials</span></span> --> <img src="img/pl_tutorials.png"></a>
 					</div>
+				</div>
+				<div class="col-lg-10 text-right">
+					<div class="mainmenu">
+						<ul>
+							<li class="active"><a href="index.html">Home</a></li>
+							<li>
+								<a href="departments.html">Materials</a>
+								<ul>
+									<li>
+										<a href="ce.html">CE</a>
+										<ul>
+											<li>
+												<a href="1-1.html">1-1</a>
+												<ul>
+													<li><a href="ce101.html">CE 101</a></li>
+												</ul>
+											</li>
+											<li><a href="1-1.html">1-2</a></li>
+											<li><a href="1-1.html">2-1</a></li>
+											<li><a href="1-1.html">2-2</a></li>
+											<li><a href="1-1.html">3-1</a></li>
+										</ul>
+									</li>
+									<li><a href="ce.html">MME</a></li>
+									<li><a href="ce.html">ME</a></li>
+									<li><a href="ce.html">CSE</a></li>
+									<li><a href="ce.html">EEE</a></li>
+									<li><a href="ce.html">URP</a></li>
+									<li><a href="#">Tuts</a></li>
+									<li><a href="#">Trending</a></li>
+								</ul>
+							</li>
+							<li><a href="softwares.html">Softwares</a></li>
+							<!-- <li><a href="#">HOF</a></li> -->
+							<li><a href="howto.html">How To</a></li>
+							<li>
+								<a href="profile.html">account</a>
+								<ul>
+									<li><a href="login.html">Login</a></li>
+									<li><a href="register.html">Register</a></li>
+								</ul>
+							</li>
+							<li><a href="books.html">Books</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<div id="overlay_search" class="overlay_search hidden">
+	<div class="container h-100">
+		<div class="row h-100 align-items-center justify-content-center">
+			<div class="col-6">
+				<span class="close_btn"><i class="fa fa-times"></i></span>
+				<form>
+					<input type="text" name="query" placeholder="Search for something">
+					<input type="submit" value="search">
+				</form>
+				<a href="search.html">Advance serch <i class="fa fa-long-arrow-right"></i></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+	<div class="section_padding hero_title_section">
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-lg-12">
+					<h3>Register</h3>
+					<span></span>
+					<p>Start your journey from here</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section_padding grey_bg register_page">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 mx-auto">
+					<span>after successful verification of your credentials, the system will send you an email with your id and password.</span>
+
+
 					<form>
 						<div class="field">
-							<label for="merit">Official Name</label>
-							<input type="text" name="username" id="username" placeholder="Student Id or email">
+							<label for="username">Official Name</label>
+							<input type="text" name="username" id="username" placeholder="Official name" class="form-control">
 							
 						</div>
 						<div class="field">
-							<label for="merit">Admission Test position</label>
+							<label for="merit">Admission Test merit position</label>
 							  <div class="input-group mb-2 mr-sm-2">
 							    <div class="input-group-prepend">
 							      <select class="custom-select">
 							      	<option value="A">Archi</option>
-							      	<option value="E">Engineering &amp; URP</option>
+							      	<option value="E" selected="">Engineering &amp; URP</option>
 							      </select>
 							    </div>
 							    <input type="text" class="form-control" id="merit" placeholder="merit position">
@@ -42,27 +128,82 @@
 						</div>
 						<div class="field">
 							<label for="email">Email</label>
-							<input type="text" name="email" id="email" placeholder="email address">
+							<input type="text" name="email" id="email" placeholder="email address" class="form-control">
 						</div>
 						<div class="field">
 							<label class="" for="id_card">Snapshot of backside of Id card.</label>
 							<span>*it will be deleted after verification.</span>
-							<input type="file" name="id_card" id="id_card" class="">
+							<!-- <input type="file" name="id_card" id="id_card" class="form-control" accept="image/*;capture=camera"> -->
 						</div>
 						<div class="field">
-							<div id="verfication_field"></div>
+							<!-- <canvas id="picture" width="100%" height="200"></canvas> -->
 						</div>
-						<input type="submit" name="submit" value="Login">
+						<div class="field">
+							<p id="verfication_field"></p>
+						</div>
+						 <div class="controls">
+				            <fieldset class="input-group">
+				                <input type="file" accept="image/*" capture="camera"/ class="form-control w-100">
+				                <!-- <button>Rerun</button> -->
+				            </fieldset>
+				     	</div>
+
+
+
+						<div id="result_strip">
+						        <ul class="thumbnails"></ul>
+						    </div>
+						    <!-- <div id="interactive" class="viewport"></div> -->
+						    <div id="debug" class="detection"></div>
+
+
+
+						    
+						        <!-- <div id="result_strip">
+						            <ul class="thumbnails"></ul>
+						        </div> -->
+						        <div id="interactive" class="viewport"></div>
+						        <div id="debug" class="detection"></div>
+						    </section>
+
+
+
+
+
+
+
+						<hr>
+						<input type="submit" name="submit" value="Register">
 					</form>
-					<span>Learn how to register <a href="howto.html">here.</a></span>
+
+
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
+
+
+	<div class="mini_footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<ul>
+						<li><a href="books.html">Books</a></li>
+						<li><a href="search.html">Advance Search</a></li>
+						<li><a href="faq.html">FAQ</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-6 text-right">
+					<span>&copy; all rights reserved <a href="https://www.facebook.com/thepltutorials/" target="_blank">PL Tutorials</a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- <script src="http://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script> -->
 <script type="text/javascript" src="js/smoothscroll.js"></script>
 <script type="text/javascript" src="js/waypoint.js"></script>
 <script type="text/javascript" src="js/jquery.ripples-min.js"></script>
@@ -72,6 +213,85 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/owl.carousel.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+<script src="js/quagga.js" type="text/javascript"></script>
+<script src="js/file_input.js" type="text/javascript"></script>
+
+<!-- <script type="text/javascript" src="js/BarcodeReader.js"></script> -->
+<!-- <script type="text/javascript">
+	var takePicture = document.querySelector("#id_card"),
+	showPicture = document.createElement("img");
+	Result = document.querySelector("#verfication_field");
+	var canvas =document.getElementById("picture");
+	var ctx = canvas.getContext("2d");
+	BarcodeReader.Init();
+	BarcodeReader.SetImageCallback(function(result) {
+		console.log(result);
+		if(result.length > 0){
+			var tempArray = [];
+			for(var i = 0; i < result.length; i++) {
+				tempArray.push(result[i].Format+" : "+result[i].Value);
+			}
+			Result.innerHTML=tempArray.join("<br />");
+		}else{
+			if(result.length === 0) {
+				Result.innerHTML="Decoding failed.";
+			}
+		}
+	});
+	BarcodeReader.PostOrientation = true;
+	BarcodeReader.OrientationCallback = function(result) {
+		canvas.width = result.width;
+		canvas.height = result.height;
+		var data = ctx.getImageData(0,0,canvas.width,canvas.height);
+		for(var i = 0; i < data.data.length; i++) {
+			data.data[i] = result.data[i];
+		}
+		ctx.putImageData(data,0,0);
+	};
+	BarcodeReader.SwitchLocalizationFeedback(true);
+	BarcodeReader.SetLocalizationCallback(function(result) {
+		ctx.beginPath();
+		ctx.lineWIdth = "2";
+		ctx.strokeStyle="red";
+		for(var i = 0; i < result.length; i++) {
+			ctx.rect(result[i].x,result[i].y,result[i].width,result[i].height); 
+		}
+		ctx.stroke();
+	});
+	if(takePicture && showPicture) {
+		takePicture.onchange = function (event) {
+			var files = event.target.files;
+			if (files && files.length > 0) {
+				file = files[0];
+				try {
+					var URL = window.URL || window.webkitURL;
+					showPicture.onload = function(event) {
+						Result.innerHTML="";
+						BarcodeReader.DecodeImage(showPicture);
+						URL.revokeObjectURL(showPicture.src);
+					};
+					showPicture.src = URL.createObjectURL(file);
+				}
+				catch (e) {
+					try {
+						var fileReader = new FileReader();
+						fileReader.onload = function (event) {
+							showPicture.onload = function(event) {
+								Result.innerHTML="";
+								BarcodeReader.DecodeImage(showPicture);
+							};
+							showPicture.src = event.target.result;
+						};
+						fileReader.readAsDataURL(file);
+					}
+					catch (e) {
+						Result.innerHTML = "Neither createObjectURL or FileReader are supported";
+					}
+				}
+			}
+		};
+	}
+</script> -->
 
 
 
