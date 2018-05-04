@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    					// year/month/day
+    					//year/month/day
 	$('#clock').countdown('2018/08/04 12:00:00').on('update.countdown', function(event) {
   		var $this = $(this).html(event.strftime(''
 				+ '<div class="wrapper"><span class="time">%-D</span><br>day%!D</div><span class="slash">/</span>'
@@ -29,10 +29,10 @@ $(document).ready(function(){
 	$(window).scroll(function() {
 	    if ($(this).scrollTop() >= 150) {        // If page is scrolled more than 50px
 	        $('#return-to-top').fadeIn(200);   // Fade in the arrow
-	        $(".nav_area").addClass("nav_fixed");
+	        $(".nav_area, .slicknav_menu").addClass("nav_fixed");
 	    } else {
 	        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
-	        $(".nav_area").removeClass("nav_fixed");
+	        $(".nav_area, .slicknav_menu").removeClass("nav_fixed");
 	    }
 	});
 	$('#return-to-top').click(function() {      // When arrow is clicked
@@ -50,6 +50,11 @@ $(document).ready(function(){
 
 	$('.close_btn, window').on('click', function() {
 		$('.overlay_search').removeClass('visible').addClass('hidden');
+	});
+
+	$('#menu').slicknav({
+		label: '',
+		brand: '<div class="logo"><a href="index.html"> <!-- <span>PL <span>Tutorials</span></span> --> <img src="img/pl_tutorials.png"></a></div>'
 	});
 
 
