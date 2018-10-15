@@ -1,6 +1,6 @@
 $(document).ready(function(){
     					//year/month/day
-	$('#clock').countdown('2018/08/04 12:00:00').on('update.countdown', function(event) {
+	$('#clock').countdown('2050/08/04 12:00:00').on('update.countdown', function(event) {
   		var $this = $(this).html(event.strftime(''
 				+ '<div class="wrapper"><span class="time">%-D</span><br>day%!D</div><span class="slash">/</span>'
 				+ '<div class="wrapper"><span class="time">%H</span><br>hours</div><span class="slash">/</span>'
