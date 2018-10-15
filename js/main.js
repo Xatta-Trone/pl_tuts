@@ -54,7 +54,8 @@ $(document).ready(function(){
 
 	$('#menu').slicknav({
 		label: '',
-		brand: '<div class="logo"><a href="index.html"> <!-- <span>PL <span>Tutorials</span></span> --> <img src="img/pl_tutorials.png"></a></div>'
+		brand: '<div class="logo"><a href="index.html"> <!-- <span>PL <span>Tutorials</span></span> --> <img src="img/pl_tutorials.png"></a></div>',
+		//duplicate: false,
 	});
 
 
